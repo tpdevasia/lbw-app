@@ -1,11 +1,14 @@
 library(shiny)
 
-# Define UI for low birth weight application
+# Define UI for random distribution application 
 shinyUI(fluidPage(
   
   # Application title
   titlePanel("County Health Rankings"),
-
+  
+  # Sidebar with controls to select the random distribution type
+  # and number of observations to generate. Note the use of the
+  # br() element to introduce extra vertical spacing
   sidebarLayout(
     sidebarPanel(
       
