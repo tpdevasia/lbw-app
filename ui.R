@@ -13,7 +13,7 @@ shinyUI(fluidPage(
     sidebarPanel(
       
       helpText( 
-          p("This application shows the county ranks for different modeling assumptions. Counties are ranked based on the estimated number of low birth weight births per 1000 births. Data was gathered from http://www.countyhealthrankings.org/rankings/data.")
+          p("This application shows the county percentile ranks for different modeling assumptions. Counties are ranked based on the estimated number of low birth weight births per 1000 births. Data was gathered from http://www.countyhealthrankings.org/rankings/data.")
       ),
       
       selectInput("region", 
@@ -51,9 +51,9 @@ shinyUI(fluidPage(
       tabsetPanel(type = "tabs", 
                   tabPanel("Map", plotOutput("plot", width="100%")), 
                   tabPanel("Table, Top", tableOutput("table_top")),
-                  tabPanel("Confidence Interval Plot, Top", plotOutput("ci_top")),
+                  tabPanel("Credible Interval Plot, Top", plotOutput("ci_top")),
                   tabPanel("Table, Bottom", tableOutput("table_bottom")),
-                  tabPanel("Confidence Interval Plot, Bottom", plotOutput("ci_bottom"))
+                  tabPanel("Credible Interval Plot, Bottom", plotOutput("ci_bottom"))
       )
     )
   ))
